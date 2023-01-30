@@ -17,7 +17,11 @@
   </ul>
 
   <script>
-
+let elements = document.querySelectorAll('ul > li:first-child')
+for (let element of elements) {
+  element.style.color = "gray"
+  element.innerHTML = 'Новое Значение'
+}
   </script>
 </body>
 </html>

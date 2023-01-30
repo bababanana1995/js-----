@@ -10,7 +10,13 @@
   <p>Разделитель</p>
   <hr>
   <script>
+let div = document.createElement('div')
+ div.className = "alert"
+document.body.prepend(div)
 
-  </script>
+let p = document.createElement('p')
+p.textContent = 'Важное сообщение!'
+ div.replaceWith(p)
+ </script>
 </body>
 </html>

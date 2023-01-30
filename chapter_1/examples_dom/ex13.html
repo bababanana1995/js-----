@@ -14,7 +14,11 @@
   </ul>
 
   <script>
-
+let ul = document.querySelector('ul')
+ul.insertAdjacentHTML('beforebegin', '<p>beforebegin</p>')
+ul.insertAdjacentHTML('afterend', '<p>afterbegin</p>')
+ul.insertAdjacentHTML('afterbegin', '<li>afterbegin</li>')
+ul.insertAdjacentHTML('beforeend', '<li>afterbegin</li>')
   </script>
 </body>
 </html>
