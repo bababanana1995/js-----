@@ -13,7 +13,27 @@
 
   <script src="../js/const.js"></script>
   <script>
-
+people.forEach(function(item) {
+  let fio =` ${item["name"]["f"]} ${item["name"]["i"]} ${item["name"]["o"]}`
+  let date =item ["date"] ? `${item["date"]["d"]} ${month[+item["date"]["m"]]}
+   ${item["date"]["y"]}` : ``
+   let element = document.createElement('p')
+   element.innerHTML = fio +" "+ date
+   for(let i=0; i<=12; i++) {
+    if(item["date"]["m"] ==i) {
+      if(document.querySelector(`.items > div .item${i}`)==null) {
+        let div = document.createElement('div')
+        div.classList.add('item')
+        div.innerHTML = `
+        <h4>${monthIp[i]}</h4>
+        <div class="item${i}"></div>
+        `
+        document.querySelector('.items').append(div)
+      }
+    document.querySelector(`.items > div .item${i}`).append(element)
+    }
+   }
+})
   </script>
 </body>
 

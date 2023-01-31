@@ -12,7 +12,30 @@
 
   <script src="../js/const.js"></script>
   <script>
-    
+    function rooms() {
+      let rooms = [];
+      for(let i=0; i<people.length; i++) {
+        rooms.push(
+          [ people[i]["room"], `${people[i]["name"]["f"]} ${people[i]["name"]["i"]} 
+          ${people[i]["name"]["o"]}` ]
+        )
+      }
+      return rooms.sort((a,b) => +a[0]-b[0] )
+    }
+    document.querySelector('body').innerHTML = `<table></table>`
+    let title_rooms = document.createElement('tr')
+    title_rooms.innerHTML = `
+    <th>Комната</th>
+    <th>ФИО</th>`
+    document.querySelector('table').append(title_rooms)
+    for(let i=0; i<rooms().length; i++) {
+      let row = document.createElement('tr')
+      row.innerHTML = `
+      <td>${rooms()[i][0]}</td>
+      <td>${rooms()[i][1]}</td>
+      `
+      document.querySelector('table').append(row)
+    }
   </script>
 </body>
 
