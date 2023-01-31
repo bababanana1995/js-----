@@ -13,7 +13,12 @@
   </div>
 
   <script>
-
-  </script>
+let div = document.querySelector('div')
+div.style.color = "black"
+div.style.width = "300px"
+div.style.display = "none"
+div.style.backgroundColor = prompt("Цвет", "tomato")
+setTimeout(() => div.style.display = "", 3000)
+</script>
 </body>
 </html>

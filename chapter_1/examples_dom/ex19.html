@@ -12,28 +12,38 @@
   <tr>
     <th>Имя</th>
     <th>Возраст</th>
+    <th>комната</th>
   </tr>
   <tr>
     <td>Саша</td>
     <td>10</td>
+    <td>5</td>
   </tr>
   <tr>
     <td>Маша</td>
     <td>15</td>
+    <td>7</td>
   </tr>
   <tr>
     <td>Паша</td>
     <td>11</td>
+    <td>6</td>
   </tr>
   <tr>
     <td>Даша</td>
-    <td>7</td>
+    <td>12</td>
+    <td>2</td>
   </tr>
 </table>
 
 <body>
   <script>
-
+let sortedRows = Array.from(table.rows)
+.slice(1)
+.sort((rowA, rowB) => {
+  return rowA.cells[2].innerHTML - rowB.cells[2].innerHTML
+})
+table.tBodies[0].append(...sortedRows)
   </script>
 </body>
 

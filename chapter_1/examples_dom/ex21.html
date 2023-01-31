@@ -13,7 +13,12 @@
   </div>
 
   <script>
-
+    let div = document.querySelector('div')
+    div.className = "alert text block"
+for(let name of div.classList) {
+  console.log(name)
+}
+div.classList.remove('block')
   </script>
 </body>
 </html>
