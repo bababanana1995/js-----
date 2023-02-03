@@ -59,11 +59,14 @@
       if(day == 0) day = 7;
       return day - 1;
     }
-
-    
-for(let i=0; i<12; i++) {
-  document.createCalendar('body', 2021, 1);
+let month1 = [1,2,3,4,5,6,7,8,9,10,11,12];
+    function createElement(month1) {
+let result = []
+    for(let i=0; i<month1.length; i++) {
+      result.push(`${month1[i]}`)
+  document.createCalendar('body', 2021, month1)
 }
+    }
   </script>
 </body>
 
