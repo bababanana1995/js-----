@@ -9,13 +9,18 @@
 </head>
 
 <body>
-  
+
   <input type="button" value="1" data-counter>
   <input type="button" value="3" data-counter>
   <input type="button" value="8" data-counter>
 
   <script>
+    document.addEventListener('click', function(e) {
+      if(e.target.dataset.counter != undefined) {
+        e.target.value++
+      }
 
+    })
   </script>
 </body>
 

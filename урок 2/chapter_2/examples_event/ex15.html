@@ -22,12 +22,24 @@
     Показать/Скрыть Password
   </button>
 
-  <form id="password" hidden>
+  <form id="text" hidden>
     Пароль: <input type="password">
+  </form>
+  <button data-toggle-id="type="text">
+    Показать/Скрыть Text
+  </button>
+
+  <form id="text" hidden>
+    Пароль: <input type="text">
   </form>
 
   <script>
-
+document.addEventListener('click', function(e) {
+  let id = e.target.dataset.toggleId
+  if(!id) return
+  let elem = document.getElementById(id)
+  elem.hidden = ! elem.hidden
+})
   </script>
 </body>
 
