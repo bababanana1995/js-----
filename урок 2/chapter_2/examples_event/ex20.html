@@ -17,7 +17,19 @@
   <button class="menu_link" id="elem">Кнопка</button>
 
   <script>
-    
+    link.onclick = function(e){
+      return false
+    }
+    elem.oncontextmenu = function(e){
+      e.preventDefault()
+      alert("контекстное меню кнопки")
+    }
+    document.oncontextmenu = function(e){
+      if(e.defaultPrevented) return
+      e.preventDefault()
+      alert("контекстное меню")
+ 
+         }   
   </script>
 </body>
 
