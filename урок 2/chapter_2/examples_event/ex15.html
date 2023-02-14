@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" id="theme">
+  <title>Пример 15 - Переключатель</title>
+</head>
+
+<body>
+  
+  <button data-toggle-id="email">
+    Показать/Скрыть Email
+  </button>
+
+  <form id="email" hidden>
+    Email: <input type="email">
+  </form>
+
+  <button data-toggle-id="password">
+    Показать/Скрыть Password
+  </button>
+
+  <form id="text" hidden>
+    Пароль: <input type="password">
+  </form>
+  <button data-toggle-id="type="text">
+    Показать/Скрыть Text
+  </button>
+
+  <form id="text" hidden>
+    Пароль: <input type="text">
+  </form>
+
+  <script>
+document.addEventListener('click', function(e) {
+  let id = e.target.dataset.toggleId
+  if(!id) return
+  let elem = document.getElementById(id)
+  elem.hidden = ! elem.hidden
+})
+  </script>
+</body>
+
+</html>

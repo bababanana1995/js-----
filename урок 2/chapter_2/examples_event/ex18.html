@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" id="theme">
+  <title>Пример 18 - Сортировка таблицы</title>
+</head>
+
+<body>
+
+  <table id="table">
+    <thead>
+      <tr>
+        <th data-type="string">Имя</th>
+        <th data-type="number">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Павел</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>Александр</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>Иван</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>Евгений</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>Мария</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    table.onclick = function(e) {
+      if(e.target.tagName != 'TH') return
+      let th = e.target
+      sortTable(th.cellIndex, th.dataset.type)
+    }
+    function sortTable(colNum, type) {
+      let tbody = table.querySelector('tbody')
+      let rowsArray = Array.from(tbody.rows)
+      let compare;
+      switch(type) {
+        case 'number':
+        compare = function(rowA, rowB) {
+return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML
+        }
+        break
+      case 'string':
+compare = function(rowA, rowB) {
+  return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1
+}
+break;
+      }
+      rowsArray.sort(compare)
+      tbody.append(...rowsArray)
+    }
+  </script>
+</body>
+
+</html>

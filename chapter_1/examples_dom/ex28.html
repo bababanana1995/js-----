@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Пример 28 - Карточки</title>
+</head>
+
+<body>
+  <div class="items"></div>
+
+  <script src="../js/const.js"></script>
+  <script>
+    function createCards(selector, array) {
+
+      for (let i = 0; i < array.length; i++) {
+        let item = document.createElement('div')
+        item.classList.add('item')
+        item.innerHTML = `
+  ФИО: ${array[i]["name"]["f"]} ${array[i]["name"]["i"]} ${array[i]["name"]["o"]}<br>
+  Номер телефона:${array[i]["number"].join(', ')} <br>
+  День рождения: ${array[i]["date"]["d"]} ${month[+array[i]["date"]["m"]]} ${array[i]["date"]["y"]} <br>
+  Комната: ${array[i]["room"]}<br>
+  `
+
+        document.querySelector(selector).append(item)
+      }
+      date.sort((a,b) => +a[0]-b[0] )
+      
+    }
+    createCards(".items", people)
+  </script>
+</body>
+
+</html>
