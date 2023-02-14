@@ -3,13 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles1.css">
   <title>Document</title>
   
 </head>
 <body>
+  <div class="page-wrapper">
+    <!-- это менюшка -->
+    <header id="header">
+      <div class="logo">
+        <img src="https://abali.ru/wp-content/uploads/2017/10/smeshariki-ch-b.png">
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#features">features</a></li>
+          <li><a class="nav-link" href="#how-it-works">how-it-work</a></li>
+          <li><a class="nav-link" href="#pricing">pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+  <!-- конец менюшки -->
+<!-- форма с адресом -->
+<div class="container"></div>
+  <section id="hero">
+    <h2>Handcrafted, home-made masterpieces</h2>
+    <form id="form" action="https://webmg.ru/wp-content/uploads/2022/10/i-81-13.jpeg">
+      <h2>Оставьте свою почту что бы учавствовать в розыгрыше</h2>
+      <input 
+      name="email" 
+      id="email" 
+      type="email" 
+      placeholder="Please write you email"
+      required
+/>
+      <input name="submit" 
+      id="submit" 
+      type="submit" 
+      value="Get Started"
+      class="btn"/>
+    </form>
+  </section>
+  <!-- конец формы с адресом -->
   
+  <div class="container">
+ <div id="features">
+    <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+      <div class="desc">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, totam?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea non earum maiores error vitae eos nobis labore quae excepturi iste.</p>
+      </div>
+    </div>
+    
+      <div class="grid">
+      <div class="icon">
+      <i class="fa fa-3x fa-truck"></i>
+      </div>
+      <div class="desc">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, temporibus.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui aliquam cum necessitatibus vel nemo illo odit tenetur explicabo aliquid quasi.</p>
+      </div></div>
+    
+    
+      <div class="grid">
+      <div class="icon">
+        <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+      </div>
+      <div class="desc">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quam.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim illo neque, totam a voluptatibus non blanditiis possimus excepturi quas mollitia?</p>
+      </div>
+    </div>
+
+    </section>
+
+    <section id="how-it-works">
+      <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+    </section>
+    <section id="pricing">
+      <div class="product" id="tenor">
+        <div class="level">Крош</div>
+        <h2>500$</h2>
+        <ol>
+          <li>быстрый</li>
+          <li>ловкий</li>
+          <li>ушастый</li>
+        </ol>
+        <button class="btn">Жмяк</button>
+      </div>
+      <div class="product" id="tenor">
+        <div class="level">Бараш</div>
+        <h2>700$</h2>
+        <ol>
+          <li>не быстрый</li>
+          <li>пушистый</li>
+          <li> не ушастый</li>
+        </ol>
+        <button class="btn">Жмяк</button>
+      </div>
+      <div class="product" id="tenor">
+        <div class="level">Нюша</div>
+        <h2>1000$</h2>
+        <ol>
+          <li>Розовая</li>
+          <li>С косичками</li>
+          <li>с пятаком</li>
+        </ol>
+        <button class="btn">Жмяк</button>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2016, Original Trombones</span>
+    </footer>
+  </div>
+  </div>
 </body>
 </html>
 
-<link rel="stylesheet" href="style.css">
