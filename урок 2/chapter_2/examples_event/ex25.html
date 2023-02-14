@@ -10,8 +10,12 @@
 
 <body>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo beatae blanditiis laboriosam consequuntur provident tenetur veniam quidem, rerum, eligendi voluptates nihil saepe voluptate vitae, nisi enim? Ducimus reprehenderit necessitatibus eaque!</p>
+  <textarea></textarea>
   <script>
-    
+    document.querySelector('p').oncopy = function(e) {
+      e.preventDefault()
+      alert("ая яй копировать не хорошо")
+    }
   </script>
 </body>
 
