@@ -11,7 +11,19 @@
 <body>
   <div class="bgc" style="width: 150px; height: 150px"></div>
   <script>
-    
+    document.querySelector('.bgc').addEventListener('mousedown', function(e) {
+      switch (e.which) {
+        case 1:
+       console.log('Нажата левая кнопка мыши')
+       break 
+        case 2:
+       console.log('Нажата средняя кнопка мыши')
+       break 
+        case 3:
+       console.log('Нажата правая кнопка мыши')
+       break 
+      }
+    })
   </script>
 </body>
 
