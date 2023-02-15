@@ -11,7 +11,14 @@
 <body>
 
   <script>
-    
+    document.addEventListener('keyup', function(e) {
+      console.log('Код ' + e.code)
+      console.log('Символ ' + e.key)
+    })
+    document.addEventListener('keydown', function(e) {
+      if(e.code = 'KeyZ' && e.ctrlKey || e.metaKey)
+      console.log('получилось')
+    })
   </script>
 </body>
 

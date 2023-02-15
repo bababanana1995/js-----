@@ -11,7 +11,25 @@
 <body>
 
   <script>
-    
+function hotKeys(func, ...codes) {
+  let pressed = new Set()
+  document.addEventListener('keydown', function(e) {
+    pressed.add(e.code)
+    for(let code of codes) {
+      if(!pressed.has(code)) {
+        return
+      }
+    }
+    pressed.clear()
+      func()
+  })
+  document.addEventListener('keyup', function(e) {
+  pressed.delete(e.code)
+  } )
+}
+hotKeys(function() {
+  console.log('вы нажали f+g')
+}, "KeyF","KeyG")
   </script>
 </body>
 
