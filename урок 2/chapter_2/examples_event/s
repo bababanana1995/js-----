@@ -35,17 +35,44 @@ describe("Tests", () => {
         Test.assertSimilar(whatNumberIsIt(NaN), "Input number is Number.NaN");
         Test.assertSimilar(whatNumberIsIt(Infinity + 1), "Input number is Number.POSITIVE_INFINITY");
 
-    function whatNumberIsIt(n) {
+        function whatNumberIsIt(n) {
 
-        switch (n) {
-            case Number.POSITIVE_INFINITY:
-                return ("Input number is Number.POSITIVE_INFINITY")
-            case Number.NEGATIVE_INFINITY:
-                return ("Input number is Number.NEGATIVE_INFINITY")
-            case Number.MAX_VALUE:
-                return ("Input number is Number.MAX_VALUE")
-            case Number.MIN_VALUE:
-                return ("Input number is Number.MIN_VALUE")
-            case Number(n) : return "Input number is " + n
-                default : return "Input number is Number.NaN"
-        }
+            switch (n) {
+                case Number.POSITIVE_INFINITY:
+                    return ("Input number is Number.POSITIVE_INFINITY")
+                case Number.NEGATIVE_INFINITY:
+                    return ("Input number is Number.NEGATIVE_INFINITY")
+                case Number.MAX_VALUE:
+                    return ("Input number is Number.MAX_VALUE")
+                case Number.MIN_VALUE:
+                    return ("Input number is Number.MIN_VALUE")
+                case Number(n): return "Input number is " + n
+                default: return "Input number is Number.NaN"
+            }
+
+
+
+            function colorOf(r, g, b) {
+                let red = r.toString(16);
+                let green = g.toString(16);
+                let blue = b.toString(16);
+
+                red = red.length < 2 ? '0' + red : red;
+                green = green.length < 2 ? '0' + green : green;
+                blue = blue.length < 2 ? '0' + blue : blue;
+
+                let color = '#' + red + green + blue;
+                return color
+            }
+
+            function colorOf(r, g, b) {
+                let red = red.toString(16);
+                let green = green.toString(16);
+                let blue = blue.toString(16);
+
+                red = red.length < 2 ? '0' + red : red;
+                green = green.length < 2 ? '0' + green : green;
+                blue = blue.length < 2 ? '0' + blue : blue;
+                let color = '#' + red + green + blue;
+                return color
+            }
