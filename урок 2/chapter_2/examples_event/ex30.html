@@ -33,7 +33,20 @@
   </form>
 
   <script>
-    
+    let form = document.forms[0]
+    // let radioBtns = form.elements.radioBtn
+    // let fieldset = form.elements.myFieldset
+    // let select = form.elements.mySelect
+    // select.options[1].selected = true
+    let select = form.elements.mySelect2
+    // let selected = Array.from(select.options)
+    // .filter(option =>option.selected) 
+    // .map(option =>option.value) 
+    // console.log(selected)\
+    let newOpt = new Option("элемент 4", "item7", true)
+    select.append(newOpt)
+
+
   </script>
 </body>
 
