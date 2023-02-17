@@ -12,7 +12,10 @@
   <input type="text" id="input">
 
   <script>
-    
+    input.oncut = input.oncopy = input.onpaste = function(e) {
+      console.log(e.type + ' - ' + e.clipboardData.getData('text/plain'))
+      return false
+    }
   </script>
 </body>
 
