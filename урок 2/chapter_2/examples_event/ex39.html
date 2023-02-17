@@ -22,7 +22,12 @@
   <button id="button">Кнопка с текстом</button>
 
   <script>
-    
+    document.onselectionchange = function() {
+      let {anchorNode, anchorOffset, focusNode, focusOffset} = document.getSelection()
+      from.value = `${anchorNode && anchorNode.data} : ${anchorOffset}`
+      to.value = `${focusNode && focusNode.data} : ${focusOffset}`
+      console.log(document.getSelection().toString())
+    }
   </script>
 </body>
 
