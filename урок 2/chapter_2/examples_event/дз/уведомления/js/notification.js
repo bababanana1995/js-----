@@ -85,6 +85,7 @@ setInterval(()=>{
     if(!document.querySelector('.audioAlert')) {
         document.querySelector('body').insertAdjacentHTML('afterbegin', 
         '<audio loop c class="audioAlert"><source src="../уведомления/source/alert.mp3" type="audio/mpeg">')
+        
         document.querySelector('.audioAlert').play()
     }
     }
