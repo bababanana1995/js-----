@@ -49,11 +49,44 @@ document.querySelector('.notification__list > div').insertAdjacentHTML('beforeen
   </div>
 `)
     }
-    document.querySelector('.notfication__form input').value = ''
-    document.querySelector('.notfication__form textarea').value = ''
+    document.querySelector('.notification__form input').value = ''
+    document.querySelector('.notification__form textarea').value = ''
     if(document.querySelector('.audioAlert')){
     document.querySelector('.audioAlert').remove()
     }
 }
 
-document.querySelector('.notification__list')
+document.querySelector('.notification__list').addEventListener('click', function(e){
+if(!e.target.dataset.time){
+    return
+}
+localStorage.removeItem(e.target.dataset.time)
+update()
+})
+
+setInterval(()=>{
+    let currentDate = new Date()
+    let currentHour = currentDate.getHours()
+    if(currentHour < 10){
+        currentHour = '0' + currentHour
+    }
+    let currentMinute = currentDate.getMinutes()
+    if(currentMinute < 10) {
+        currentMinute = '0' + currentMinute
+    }
+    let currentTime = `${currentHour}:${currentMinute}`
+    for(let key of Object.keys(localStorage)) {
+        let keyHour = key.split(':')[0]
+        let keyMinute = key.split(':')[1]
+    
+        if(key == currentTime || (keyHour == currentHour && keyMinute < currentMinute))
+    {
+        document.querySelector(`button[data-time="${key}"]`).closest('.notification__item').classList.add('notification__warning')
+    if(!document.querySelector('.audioAlert')) {
+        document.querySelector('body').insertAdjacentHTML('afterbegin', 
+        '<audio loop c class="audioAlert"><source src="../уведомления/source/alert.mp3" type="audio/mpeg">')
+        document.querySelector('.audioAlert').play()
+    }
+    }
+    }
+}, 1000)
