@@ -7,7 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
+<div><div>
+    <input type="text" id="good">
+</div>
+    <button class="add" >Push</button>
+<button class="del" >Pop</button>
+</div>
+    <script> 
+
+    let car = []
+    document.querySelector('.add').onclick = () =>{
+        let id = +document.querySelector('#good').value
+    if(!car.includes(id)){
+    car.push(id)}
+console.log(car)    
+}
+    document.querySelector('.del').onclick = () =>{
+        let id = +document.querySelector('#good').value
+        let good = car.pop()
+        console.log('Товар id' + good + ' был удалён')
+console.log(car)    
+}
+    </script>
 
 </body>
 </html>
