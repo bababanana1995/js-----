@@ -243,7 +243,7 @@ h1 {
 /* Аниация */
 .animated {
   transition-property: background-color;
-  transition-duration: 3s;
+  transition-duration: 2s;
 }
 .move {
   position: relative;
@@ -262,23 +262,23 @@ h1 {
 }
 .move0 {
   background-image: url(../img/1.jpg);
-  transition: left 5s linear;
+  transition: left 3s linear;
 }
 .move1 {
   background-image: url(../img/2.jpg);
-  transition: left 5s ease;
+  transition: left 3s ease;
 }
 .move2 {
   background-image: url(../img/3.jpg);
-  transition: left 5s ease-in;
+  transition: left 3s ease-in;
 }
 .move3 {
   background-image: url(../img/4.jpg);
-  transition: left 5s ease-out;
+  transition: left 3s ease-out;
 }
 .move4 {
   background-image: url(../img/5.jpg);
-  transition: left 5s ease-in-out;
+  transition: left 3s ease-in-out;
 }
 .img-animate {
   transition-property: opacity;
